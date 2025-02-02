@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Google Form-like App</title>
+    <link rel="stylesheet" href="css/styles.css" />
+  </head>
+
+  <body>
+    <div class="tabs">
+      <ul class="tab-links">
+        <li class="active"><a href="#forms">Forms</a></li>
+        <li><a href="#saved-responses">Saved Responses</a></li>
+      </ul>
+      <div class="tab-content">
+        <!-- Tab 1: Forms -->
+        <div id="forms" class="tab-pane active">
+          <h1 class="createform">Create a Form</h1>
+
+          <!-- Form Name and Description -->
+          <div class="form-details">
+            <input type="text" id="form-name" placeholder="Enter Form Name" />
+            <textarea
+              id="form-description"
+              placeholder="Enter Form Description"
+            ></textarea>
+          </div>
+
+          <!-- Question creation area -->
+          <div id="question-section">
+            <h3>Add Questions</h3>
+            <div class="question-container">
+              <input
+                type="text"
+                class="question"
+                placeholder="Enter Question"
+              />
+              <select class="question-type">
+                <option value="checkbox">Checkbox</option>
+                <option value="radio">Radio</option>
+                <option value="dropdown">Dropdown</option>
+              </select>
+              <textarea
+                class="options"
+                placeholder="Enter options (comma separated)"
+              ></textarea>
+              <button class="add-question">Add Question</button>
+            </div>
+          </div>
+
+          <!-- Save Form Button -->
+          <button id="save-form">Save Form</button>
+        </div>
+
+        <!-- Tab 2: Saved Responses -->
+        <div id="saved-responses" class="tab-pane">
+          <h2>Saved Forms</h2>
+          <table id="saved-forms-table" border="1">
+            <thead>
+              <tr>
+                <th>Form Name</th>
+                <th>Description</th>
+                <th>Actions</th>
+              </tr>
+            </thead>
+            <tbody>
+              <!-- Dynamic rows will be added here -->
+            </tbody>
+          </table>
+        </div>
+      </div>
+    </div>
+
+     <!-- Popup content (Hidden by default) -->
+     <div id="form-popup" class="popup">
+      <div id="popup-content" class="popup-content">
+        <span class="close">&times;</span> <!-- Close button -->
+        <!-- Form content will be dynamically inserted here -->
+      </div>
+    </div>
+
+    <!-- Link to the compiled JavaScript file -->
+    <script type="module" src="./script.js"></script>
+  </body>
+</html>

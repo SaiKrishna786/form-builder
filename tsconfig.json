@@ -1,0 +1,16 @@
+{
+  "compilerOptions": {
+    "module": "ESNext",           // Use ES Modules (browser-compatible)
+    "target": "ES6",              // Target ES6 or newer to support modern JavaScript features
+    "outDir": "./dist",           // Output the compiled files into the `dist` folder
+    "strict": true,               // Enable strict type checking
+    "moduleResolution": "node",   // Resolve modules in Node.js fashion, which works in most setups
+    "esModuleInterop": true,      // Allow default imports from non-ES modules
+    "allowJs": true,               // Allow JavaScript files alongside TypeScript files
+    "declaration": false,         // Don't generate `.d.ts` files
+    "skipLibCheck": true         // Skip type-checking of declaration files (can speed up compilation)
+  },
+  "include": [
+    "./src/**/*"
+  ]
+}
